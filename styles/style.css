@@ -1,19 +1,19 @@
 :root {
   --contrast: #e1866d;
-  --main-light: #bde1de;
   --main: #9bceca;
   --main-dark: #2f4c54;
-  --light: white;
-  --dark: #aeaeae;
+  --main-darker: #1d3035;
+  --light: #dcf5f3;
+  --dark: black;
 }
 
 body { 
   margin: 0; padding: 0; display: grid;
-  font-family: 'Lato';
+  font-family: sans-serif;
 }
 
 .home {
-  height: 100vh;
+  height: 94vh; padding-top: 50px;
   background-image: url('../images/splash.jpg'); background-size: cover; 
   background-position: bottom; background-attachment: fixed;
   display: flex; flex-direction: column; align-items: center; justify-content: center;
@@ -26,7 +26,10 @@ body {
 }
 .home__text {
   width: 75%;
-  color: var(--main-dark); font-size: 1.5rem; text-align: center; text-shadow: 1px 1px 15px var(--main-dark);
+  color: var(--light); font-size: 1.5rem; text-align: center; text-shadow: 1px 1px 15px var(--main-dark);
+}
+.home__chevron {
+  font-size: 4rem; color: var(--main-dark);
 }
 
 .nav {
@@ -45,11 +48,38 @@ body {
   color: var(--light); margin: 5px 0; text-decoration: none; text-transform: uppercase;
   font-size: 1.1rem;
 }
-/* .nav {
-   absolute; width: 100vw; height: 3rem;
-   display: flex;
+
+.about {
+  background: var(--main-darker); color: var(--light); padding: 10px 60px; display: grid;
+  text-align: center;
 }
-. {
-  
+.about__header {
+  margin: 4rem auto 6rem auto;
+  font-size: 4rem; font-weight: bold; display: inline-block; border-bottom: 4px solid var(--contrast);
 }
- */
+.about__text {
+  font-size: 1.7rem; line-height: 2.5rem; font-weight: 100; margin-bottom: 5rem;
+}
+.about__logos-container {
+  display: grid; grid-template-columns: repeat(4, 1fr); grid-gap: 30px;
+}
+.about__logos-tile {
+  display: grid; grid-template-columns: 1fr; grid-template-rows: 120px auto 1fr;
+  align-content: center; justify-items: center;
+  color: var(--light); font-weight: 100;
+}
+.about__logo-wrapper {
+  background: var(--light); border-radius: 50%; height: 120px; width: 120px;
+  display: flex; align-items: center; justify-content: center;
+}
+.about__logo {
+  width: 80%;
+}
+.about__logo-header {
+  text-transform: uppercase; font-weight: 100; letter-spacing: 2px;
+}
+.about__logos-text {
+  width: 90%;
+}
+
+.about__tech-stack {display: none;}
