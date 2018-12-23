@@ -1,0 +1,55 @@
+:root {
+  --contrast: #e1866d;
+  --main-light: #bde1de;
+  --main: #9bceca;
+  --main-dark: #2f4c54;
+  --light: white;
+  --dark: #aeaeae;
+}
+
+body { 
+  margin: 0; padding: 0; display: grid;
+  font-family: 'Lato';
+}
+
+.home {
+  height: 100vh;
+  background-image: url('../images/splash.jpg'); background-size: cover; 
+  background-position: bottom; background-attachment: fixed;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+}
+.home__logo {
+  width: 220px;
+}
+.home__name {
+  font-size: 3.5rem; font-weight: bold; color: var(--main-dark); text-transform: uppercase;
+}
+.home__text {
+  width: 75%;
+  color: var(--main-dark); font-size: 1.5rem; text-align: center; text-shadow: 1px 1px 15px var(--main-dark);
+}
+
+.nav {
+  display: grid; grid-template-columns: 50px 1fr; grid-gap: 25%;
+  background-color: var(--main-dark); position: fixed;
+  width: 100%;
+  border-bottom: 3px solid var(--contrast); padding: 5px; 
+}
+.nav__logo {
+  width: 100%; margin: 5px 0;
+}
+.nav__link-container {
+  display: flex; justify-content: space-around; align-items: center;
+}
+.nav__link {
+  color: var(--light); margin: 5px 0; text-decoration: none; text-transform: uppercase;
+  font-size: 1.1rem;
+}
+/* .nav {
+   absolute; width: 100vw; height: 3rem;
+   display: flex;
+}
+. {
+  
+}
+ */
