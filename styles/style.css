@@ -4,13 +4,18 @@
   --main-dark: #2f4c54;
   --main-darker: #1d3035;
   --light: #dcf5f3;
+  --lightest: white;
   --dark: black;
 }
-
 body { 
   margin: 0; padding: 0; display: grid;
-  font-family: sans-serif;
+  font-family: sans-serif; box-sizing: border-box;
 }
+.section-header {
+  margin: 4rem auto 6rem auto; text-transform: uppercase;
+  font-size: 4rem; font-weight: bold; display: inline-block; border-bottom: 4px solid var(--contrast);
+}
+
 
 .home {
   height: 94vh; padding-top: 50px;
@@ -45,17 +50,13 @@ body {
   display: flex; justify-content: space-around; align-items: center;
 }
 .nav__link {
-  color: var(--light); margin: 5px 0; text-decoration: none; text-transform: uppercase;
+  color: var(--lightest); margin: 5px 0; text-decoration: none; text-transform: uppercase;
   font-size: 1.1rem;
 }
 
 .about {
   background: var(--main-darker); color: var(--light); padding: 10px 60px; display: grid;
   text-align: center;
-}
-.about__header {
-  margin: 4rem auto 6rem auto;
-  font-size: 4rem; font-weight: bold; display: inline-block; border-bottom: 4px solid var(--contrast);
 }
 .about__text {
   font-size: 1.7rem; line-height: 2.5rem; font-weight: 100; margin-bottom: 5rem;
@@ -70,7 +71,7 @@ body {
 }
 .about__logo-wrapper {
   background: var(--light); border-radius: 50%; height: 120px; width: 120px;
-  display: flex; align-items: center; justify-content: center;
+  display: flex; align-items: center; justify-content: center; border: 2px solid var(--contrast);
 }
 .about__logo {
   width: 80%;
@@ -79,7 +80,73 @@ body {
   text-transform: uppercase; font-weight: 100; letter-spacing: 2px;
 }
 .about__logos-text {
-  width: 90%;
+  width: 90%; font-size: 0.85rem;
 }
+
+.projects {
+  background: var(--light); padding: 10px 60px; display: grid;
+  text-align: center; color: var(--main-darker)
+}
+.project__filters-list {
+  display: flex; list-style: none; padding: 0; margin: 0; width: 80%; margin: 0 auto;
+}
+.project__filters-list li {
+  flex: 1; padding: 12px 0; cursor: pointer; margin: 0 20px;
+}
+.project__filter-selected {
+  background: var(--contrast);
+}
+
+
+
+
+.footer {
+  background: var(--main-darker); color: var(--light); position: relative;
+  text-align: center; font-size: 0.8rem; padding-bottom: 50px;
+}
+.footer__copyright {
+  padding-top: 100px;
+}
+.footer::before, .footer::after {
+  display: block; content: ' '; width: 50%; height: 60px; position: absolute;
+}
+.footer::before {
+  background: linear-gradient(to top right, var(--main-darker) 0% 50%, var(--lightest) 50% 100%);
+}
+.footer::after {
+  background: linear-gradient(to bottom right, var(--lightest) 0% 50%, var(--main-darker) 50% 100%);
+  right: 0; top: 0;
+}
+.footer__button {
+  font-size: 2.2rem; border: 1px solid var(--contrast); background: none;
+  color: var(--light); border-radius: 4px; padding: 6px 11px; cursor: pointer;
+}
+.footer__button:hover i {
+  animation: chevron 1.3s linear 0s infinite;
+  /* animation-name: chevron;
+  animation-duration: 2s;
+  animation-iteration-count: infinite; */
+}
+/* .footer__button:hover {
+  /* animation: none;
+  animation-duration: 2s;
+  /* animation-iteration-count: infinite;
+} */
+
+@keyframes chevron {
+  from {transform: translateY(0);}
+  80% {transform: translateY(-8px);}
+  100% {transform: translateY(-8px);}
+}
+
+
+
+
+
+
+
+
+
+
 
 .about__tech-stack {display: none;}

@@ -15,17 +15,18 @@
 
     <body>
         <nav class="nav">
-            <img class="nav__logo" src="../images/nav-logo.png" />
+            <img class="nav__logo" src="../images/nav-logo.png" alt="Circle with AH text" />
             <div class="nav__link-container">
                 <a class="nav__link" href="#">About</a>
-                <a class="nav__link" href="#">Portfolio</a>
+                <a class="nav__link" href="#">Projects</a>
                 <a class="nav__link" href="#">Skills + Resume</a>
                 <a class="nav__link" href="#">Courses</a>
                 <a class="nav__link" href="#">Contact</a>
             </div>
         </nav>
+
         <header class="home">
-            <img class="home__logo" src="../images/logo.png" />
+            <img class="home__logo" src="../images/logo.png" alt="Circle with AH text" />
             <h1 class="home__name">Abid Hasan</h1>
             <p class="home__text">I am Abid, from Edmonton, Canada. I am a chemist, 
             turned full stack developer trying to build things that make a difference.</p>
@@ -33,14 +34,14 @@
         </header>
 
         <section class="about">
-            <h1 class="about__header">ABOUT ME</h1>
+            <h1 class="section-header about__header">ABOUT ME</h1>
             
             <p class="about__text">I am a full-stack developer based in Edmonton, Alberta.
             I code back-ends in Node or Python and slick front-ends in CSS and JS, using
             any framework(s) to get the job done.
             <br /><br />
             I am passionate about creating dynamic, accessible user interfaces, that 
-            run on robust back-ends.
+            run on robust back-ends, and learning new stuff!
             </p>
 
             <div class="about__logos-container">
@@ -49,7 +50,14 @@
                         <img class="about__logo" src='images/about-responsive.png' alt='Computer and cell phone'/>
                     </span>
                     <h1 class="about__logo-header">Responsive</h1>
-                    <p class="about__logos-text">I build pages that look great on all devices.</p>
+                    <p class="about__logos-text">I build apps that look great on all devices.</p>
+                </div>
+                <div class="about__logos-tile">
+                    <span class="about__logo-wrapper">
+                        <img class="about__logo" src='images/about-accessible.png' alt='Tachometer at highest speed' />
+                    </span>
+                    <h1 class="about__logo-header">Accessible</h1>
+                    <p class="about__logos-text">I write apps that are usable by all members of society.</p>
                 </div>
                 <div class="about__logos-tile">
                     <span class="about__logo-wrapper">
@@ -63,17 +71,43 @@
                         <img class="about__logo" src='images/about-dynamic.png' alt='Tachometer at highest speed' />
                     </span>
                     <h1 class="about__logo-header">Dynamic</h1>
-                    <p class="about__logos-text">I make living, breathing pages with animations, effects and transitions.</p>
+                    <p class="about__logos-text">I make living pages with animations and effects.</p>
                 </div>
-                <div class="about__logos-tile">
-                    <span class="about__logo-wrapper">
-                        <img class="about__logo" src='images/about-accessible.png' alt='Tachometer at highest speed' />
-                    </span>
-                    <h1 class="about__logo-header">Accessible</h1>
-                    <p class="about__logos-text">I write pages that are usable by all members of society.</p>
+            </div>                       
+        </section>
+        
+        <section class="projects">
+            <h1 class="section-header projects__header">Projects</h1>
+            <ul class="project__filters-list">
+                <li class="project__filter-selected">ALL</li>
+                <li>SHOWCASE</li>
+                <li>VANILLA JS</li>
+                <li>FRAMEWORK</li>
+                <li>FULL STACK</li>
+            </ul>
+
+            <div class="projects__details">
+                <div class="projects__tile">
+                    <div class="projects__tile-front">
+                        <img src="" alt="" />
+                        <h1>NAME</h1>
+                        <p>Summary goes here</p>
+                    </div>
+                    <div class="projects__tile-back">
+                        <p>This is a small simmary of teh project</p>
+                        <a><i class="fas fa-external-link-alt"></i></a>
+                        <a><i class="fab fa-github"></i></a>
+                    </div>
                 </div>
             </div>
-                       
+            <!-- For each: 
+                LINK TO CODE and DEMO (world icon and github icon)
+                TECH STACK ICONS
+            -->
+
+        </section>
+
+        <section class="skills">
             <ul class="about__tech-stack">
                 <li><img src="images/tech-html.png" alt="HTML" /></li>
                 <li><img src="images/tech-css.png" alt="CSS" /></li>
@@ -87,21 +121,21 @@
                 <li><img src="images/tech-python.png" alt="Python" /></li>
             </ul>
         </section>
-        
-        <section class="portfolio">
-        </section>
-
-        <section class="skills">
-        </section>
 
         <section class="courses">
         </section>
 
         <section class="contact">
             SOCIAL LOGOS
-
+            Links for GitHub + LinkedIn + SOverflow + CodePen + Heroku
         </section>
         
-        <footer></footer>
+        <footer class="footer">
+            <p class="footer__copyright">All Contents are &copy; 2018 Abid Hasan, unless noted otherwise.</p>
+            <p>Made with ❤️ and ☕ in Edmonton, Canada</p>
+            <button class="footer__button" aria-label="Scroll to top">
+                <i class="fas fa-angle-double-up"></i>
+            </button>
+        </footer>
     </body>
 </html>
