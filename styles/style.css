@@ -1,5 +1,6 @@
 :root {
   --contrast: #e1866d;
+  --contrast-light: hsl(13, 66%, 97%);
   --main-dark: #2f4c54;
   --main-darker: #1d3035;
   --light: #dcf5f3;
@@ -14,7 +15,13 @@ body {
   margin: 2rem auto 4rem auto; text-transform: uppercase;
   font-size: 3.6rem; font-weight: bold; display: inline-block; border-bottom: 4px solid var(--contrast);
 }
-
+blockquote {
+  margin: 20px 0; padding: 5px 0 5px 20px; font-family: cursive; font-size: 2.5rem;
+  border-left: 12px solid var(--contrast); background: var(--contrast-light);
+}
+cite {
+  text-align: right; display: block;
+}
 
 .home {
   height: 94vh; padding-top: 50px;
@@ -54,7 +61,7 @@ body {
 
 .about {
   background: var(--main-darker); color: var(--light); padding: 10px 60px; display: grid;
-  text-align: center;
+  text-align: center; box-shadow: 0px 0px 30px var(--dark); z-index: 1;
 }
 .about__text {
   font-size: 1.7rem; line-height: 2.5rem; font-weight: 100; margin-bottom: 5rem;
@@ -69,7 +76,11 @@ body {
 }
 .about__logo-wrapper {
   background: var(--light); border-radius: 50%; height: 120px; width: 120px;
-  display: flex; align-items: center; justify-content: center; border: 2px solid var(--contrast);
+  display: flex; align-items: center; justify-content: center;
+  border: 2px solid var(--contrast); transition: all 0.2s;
+}
+.about__logo-wrapper:hover {
+  transform: scale(1.25);
 }
 .about__logo {
   width: 80%;
@@ -83,10 +94,10 @@ body {
 
 .projects {
   background: var(--light); padding: 10px 60px; display: grid;
-  text-align: center; color: var(--main-darker)
+  text-align: center; color: var(--main-darker);
 }
 .projects__filters-list {
-  display: flex; list-style: none; padding: 0; margin: 0; width: 80%; margin: 0 auto;
+  display: flex; list-style: none; padding: 0; margin: 0; width: 85%; margin: 0 auto;
   margin-bottom: 50px;
 }
 .projects__filters-list li {
@@ -170,6 +181,35 @@ body {
   padding: 9px; color: var(--light); border-radius: 3px; text-decoration: none;
 }
 
+.courses {
+  display: grid; grid-gap: 15px; margin: 0 20px;
+}
+.courses__quote {
+  padding: 10px;
+}
+.courses__text {
+  font-size: 1.5rem; line-height: 2.3rem; font-weight: 100;
+}
+.courses__container {
+
+}
+.courses__card {
+  width: 23%; padding: 10px; border: 1px solid var(--main-dark); border-radius: 3px;
+  display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px; background: var(--contrast-light);
+}
+.courses__card-title {
+  font-weight: 100; font-size: 1.4rem; text-align: center; margin: 0; grid-column: span 2;
+  border-bottom: 2px solid var(--contrast); padding-bottom: 5px;
+}
+.courses__card-institution {
+  font-size: 0.8rem; font-weight: bold;
+}
+.courses__card-date {
+  text-align: right; font-size: 0.8rem;
+}
+.courses__card-text {
+  font-size: 0.85rem; grid-column: span 2; font-weight: 100;
+}
 
 
 
@@ -181,14 +221,14 @@ body {
   padding-top: 100px;
 }
 .footer::before, .footer::after {
-  display: block; content: ' '; width: 50%; height: 60px; position: absolute;
-}
-.footer::before {
+  width: 50%; height: 50px; position: absolute; content: ' ';
   background: linear-gradient(to top right, var(--main-darker) 0% 50%, var(--lightest) 50% 100%);
 }
+.footer::before {
+  left: 0;
+}
 .footer::after {
-  background: linear-gradient(to bottom right, var(--lightest) 0% 50%, var(--main-darker) 50% 100%);
-  right: 0; top: 0;
+  transform: scaleX(-1); right: 0; top: 0;
 }
 .footer__button {
   font-size: 2.2rem; border: 1px solid var(--contrast); background: none;
