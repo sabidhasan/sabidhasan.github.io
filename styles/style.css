@@ -1,6 +1,5 @@
 :root {
   --contrast: #e1866d;
-  --main: #9bceca;
   --main-dark: #2f4c54;
   --main-darker: #1d3035;
   --light: #dcf5f3;
@@ -87,16 +86,55 @@ body {
   background: var(--light); padding: 10px 60px; display: grid;
   text-align: center; color: var(--main-darker)
 }
-.project__filters-list {
+.projects__filters-list {
   display: flex; list-style: none; padding: 0; margin: 0; width: 80%; margin: 0 auto;
+  margin-bottom: 50px;
 }
-.project__filters-list li {
+.projects__filters-list li {
   flex: 1; padding: 12px 0; cursor: pointer; margin: 0 20px;
+  border-bottom: 3px solid var(--contrast);
 }
-.project__filter-selected {
-  background: var(--contrast);
+.projects__filter-selected {
+  background: var(--contrast); border-bottom: 3px solid var(--main-dark)!important;
 }
-
+.projects__tile-container {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  grid-template-rows: 320px;
+}
+.projects__tile {
+  border: 2px solid var(--main-darker); border-radius: 5px; background: var(--main-dark);
+  color: var(--lightest);
+}
+.projects__tile:hover > .projects__tile-back {
+  width: 100%; opacity: 1;
+}
+.projects__tile:hover > .projects__tile-front {
+  width: 0; height: 0; opacity: 0;
+}
+.projects__tile-front {
+  overflow: hidden; transition: opacity 1s;
+}
+.projects__tile-screenshot {
+  max-width: 100%;
+}
+.projects__tile-title {
+  grid-column: span 2; border-bottom: 2px solid var(--contrast); margin: 0; padding: 10px 0;
+}
+.projects__tile-text {
+  grid-column: span 2; font-size: 0.8rem;
+}
+.projects__tile-back {
+  transition: opacity 1s; width: 0; opacity: 0;
+  display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto auto 1fr;
+}
+.projects__tile-back a {
+  border: 1px solid var(--contrast); border-radius: 50%; width: 35px; height: 35px;
+  display: flex; align-items: center; justify-content: center; background: var(--light);
+  color: var(--main-darker); padding: 4px; justify-self: center; font-size: 1.7rem;
+}
+.projects__tile-icons {
+  grid-column: span 2;
+}
 
 
 
@@ -123,16 +161,7 @@ body {
 }
 .footer__button:hover i {
   animation: chevron 1.3s linear 0s infinite;
-  /* animation-name: chevron;
-  animation-duration: 2s;
-  animation-iteration-count: infinite; */
 }
-/* .footer__button:hover {
-  /* animation: none;
-  animation-duration: 2s;
-  /* animation-iteration-count: infinite;
-} */
-
 @keyframes chevron {
   from {transform: translateY(0);}
   80% {transform: translateY(-8px);}
