@@ -11,8 +11,8 @@ body {
   font-family: sans-serif; box-sizing: border-box;
 }
 .section-header {
-  margin: 4rem auto 6rem auto; text-transform: uppercase;
-  font-size: 4rem; font-weight: bold; display: inline-block; border-bottom: 4px solid var(--contrast);
+  margin: 2rem auto 4rem auto; text-transform: uppercase;
+  font-size: 3.6rem; font-weight: bold; display: inline-block; border-bottom: 4px solid var(--contrast);
 }
 
 
@@ -38,9 +38,8 @@ body {
 
 .nav {
   display: grid; grid-template-columns: 50px 1fr; grid-gap: 25%;
-  background-color: var(--main-dark); position: fixed;
-  width: 100%;
-  border-bottom: 3px solid var(--contrast); padding: 5px; 
+  background-color: var(--main-dark); position: fixed; z-index: 999;
+  width: 100%; border-bottom: 3px solid var(--contrast); padding: 5px; 
 }
 .nav__logo {
   width: 100%; margin: 5px 0;
@@ -76,10 +75,10 @@ body {
   width: 80%;
 }
 .about__logo-header {
-  text-transform: uppercase; font-weight: 100; letter-spacing: 2px;
+  text-transform: uppercase; font-weight: 100; letter-spacing: 2px; color: var(--contrast);
 }
 .about__logos-text {
-  width: 90%; font-size: 0.85rem;
+  width: 90%; font-size: 0.85rem; color: var(--lightest); line-height: 1.3rem;
 }
 
 .projects {
@@ -103,16 +102,18 @@ body {
 }
 .projects__tile {
   border: 2px solid var(--main-darker); border-radius: 5px; background: var(--main-dark);
-  color: var(--lightest);
+  color: var(--lightest); perspective: 1000px; overflow: hidden;
 }
-.projects__tile:hover > .projects__tile-back {
-  width: 100%; opacity: 1;
+.projects__tile-flipcard {
+  transition: 0.3s; transform-style: preserve-3d; position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
 }
-.projects__tile:hover > .projects__tile-front {
-  width: 0; height: 0; opacity: 0;
+.projects__tile:hover .projects__tile-flipcard {
+  transform: rotateY(180deg);
 }
 .projects__tile-front {
-  overflow: hidden; transition: opacity 1s;
+  z-index: 2; transform: rotateY(0deg); backface-visibility: hidden; position: absolute;
+  top: 0; left: 0; width: 100%; background: var(--main-dark);
 }
 .projects__tile-screenshot {
   max-width: 100%;
@@ -124,10 +125,10 @@ body {
   grid-column: span 2; font-size: 0.8rem;
 }
 .projects__tile-back {
-  transition: opacity 1s; width: 0; opacity: 0;
   display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto auto 1fr;
+  transform: rotateY(180deg); position: absolute; top: 0; left: 0; width: 100%;
 }
-.projects__tile-back a {
+.project__tile-links {
   border: 1px solid var(--contrast); border-radius: 50%; width: 35px; height: 35px;
   display: flex; align-items: center; justify-content: center; background: var(--light);
   color: var(--main-darker); padding: 4px; justify-self: center; font-size: 1.7rem;
@@ -135,6 +136,40 @@ body {
 .projects__tile-icons {
   grid-column: span 2;
 }
+
+
+
+
+.skills {
+  display: grid; grid-template-columns: 1fr; grid-gap: 20px; justify-items: center;
+  background: var(--main-dark); padding-bottom: 50px;
+}
+.skills__header {
+  color: var(--lightest);
+}
+.skills__section {
+  padding: 10px 30px; width: 90%; background: var(--lightest); border-radius: 3px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12)
+}
+.skills__section-title {
+  font-weight: 100; font-size: 2.2rem; border-bottom: 3px solid var(--contrast);
+  padding-bottom: 4px
+}
+.skills__list {
+  padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 150px));
+  list-style: none;
+}
+.skills__list li {
+  display: flex; flex-direction: column; align-items: center; justify-content: space-between;
+}
+.skills__list img {
+  max-width: 90px; margin: 10px 0;
+}
+.skills__button {
+  font-size: 1.7rem; background: none; border: 2px solid var(--contrast); margin: 15px 0;
+  padding: 9px; color: var(--light); border-radius: 3px; text-decoration: none;
+}
+
 
 
 
@@ -167,15 +202,3 @@ body {
   80% {transform: translateY(-8px);}
   100% {transform: translateY(-8px);}
 }
-
-
-
-
-
-
-
-
-
-
-
-.about__tech-stack {display: none;}

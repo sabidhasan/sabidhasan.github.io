@@ -36,12 +36,11 @@
         <section class="about">
             <h1 class="section-header about__header">ABOUT ME</h1>
             
-            <p class="about__text">I am a full-stack developer based in Edmonton, Alberta.
-            I code back-ends in Node or Python and slick front-ends in CSS and JS, using
-            any framework(s) to get the job done.
+            <p class="about__text">I am a full-stack developer based in Edmonton, AB.
+            I code backends in Node or Python and frontends in CSS and JS.
             <br /><br />
-            I am passionate about creating dynamic, accessible user interfaces, that 
-            run on robust back-ends, and learning new stuff!
+            I am passionate about creating dynamic, slick and accessible user interfaces,
+            that run on robust backends, while learning as much new stuff as possible!
             </p>
 
             <div class="about__logos-container">
@@ -88,40 +87,75 @@
 
             <div class="projects__tile-container">
                 <div class="projects__tile">
-                    <div class="projects__tile-front">
-                        <img class="projects__tile-screenshot" 
-                            src="images/projects/sample.jpg" alt=""
-                        />
-                        <h1 class="projects__tile-title">Tic Tac Toe</h1>
-                        <p class="projects__tile-text">Unbeatable and beaufitul Tic Tac Toe game written in plain JS</p>
-                    </div>
-                    <div class="projects__tile-back">
-                        <h1 class="projects__tile-title">Tic Tac Toe</h1>
-                        <p class="projects__tile-text">This is a small simmary of teh project</p>
-                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <ul class="projects__tile-icons">
-                            <li>A</li><li>B</li>
-                            <li>C</li><li>D</li>
-                        </ul>
+                    <div class="projects__tile-flipcard">
+                        <div class="projects__tile-front">
+                            <img class="projects__tile-screenshot" 
+                                src="images/projects/sample.jpg" alt=""
+                            />
+                            <h1 class="projects__tile-title">Tic Tac Toe</h1>
+                            <p class="projects__tile-text">Unbeatable and beaufitul Tic Tac Toe game written in plain JS</p>
+                        </div>
+                        <div class="projects__tile-back">
+                            <h1 class="projects__tile-title">Tic Tac Toe</h1>
+                            <p class="projects__tile-text">This is a small simmary of teh project</p>
+                            <a class="project__tile-links" href="#"><i class="fas fa-external-link-alt"></i></a>
+                            <a class="project__tile-links" href="#"><i class="fab fa-github"></i></a>
+                            <ul class="projects__tile-icons">
+                                <li>A</li><li>B</li>
+                                <li>C</li><li>D</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="skills">
-            <ul class="about__tech-stack">
-                <li><img src="images/tech-html.png" alt="HTML" /></li>
-                <li><img src="images/tech-css.png" alt="CSS" /></li>
-                <li><img src="images/tech-js.png" alt="JavaScript" /></li>
-                <li><img src="images/tech-ts.png" alt="TypeScript" /></li>
-                <li><img src="images/tech-node.png" alt="Node" /></li>
-                <li><img src="images/tech-react.png" alt="React" /></li>
-                <li><img src="images/tech-vue.png" alt="Vue" /></li>
-                <li><img src="images/tech-mysql.png" alt="MySQL" /></li>
-                <li><img src="images/tech-mongo.png" alt="MongoDB" /></li>
-                <li><img src="images/tech-python.png" alt="Python" /></li>
-            </ul>
+            <h1 class="section-header skills__header">Skills</h1>
+            <div class="skills__section">
+                <h1 class="skills__section-title">HTML</h1>
+                <ul class="skills__list">
+                    <li><img src="images/tech-html.png" alt="HTML" /><span>HTML5</span></li>
+                    <li><img src="images/tech-react.png" alt="JSX" /><span>JSX</span></li>
+                    <li><img src="images/tech-jade.png" alt="Jade" /><span>Jade</span></li>
+                </ul>
+            </div>
+            <div class="skills__section">
+                <h1 class="skills__section-title">CSS</h1>
+                <ul class="skills__list">
+                    <li><img src="images/tech-css.png" alt="CSS" /><span>CSS3</span></li>
+                    <li><img src="images/tech-sass.png" alt="SASS" /><span>SASS</span></li>
+                    <li><img src="images/tech-bootstrap.png" alt="Bootstrap" /><span>Bootstrap</span></li>
+                </ul>
+            </div>
+            <div class="skills__section">
+                <h1 class="skills__section-title">JavaScript</h1>
+                <ul class="skills__list">
+                    <li><img src="images/tech-js.png" alt="JavaScript" /><span>JavaScript</span></li>
+                    <li><img src="images/tech-ts.png" alt="TypeScript" /><span>TypeScript</span></li>
+                    <li><img src="images/tech-react.png" alt="React" /><span>React</span></li>
+                    <li><img src="images/tech-jquery.png" alt="jQuery" /><span>jQuery</span></li>
+                    <li><img src="images/tech-vue.png" alt="VueJS" /><span>VueJS</span></li>
+                </ul>
+            </div>
+            <div class="skills__section">
+                <h1 class="skills__section-title">Back-End & Databases</h1>
+                <ul class="skills__list">
+                    <li><img src="images/tech-node.png" alt="Node" /><span>Node (Express)</span></li>
+                    <li><img src="images/tech-mysql.png" alt="MySQL" /><span>SQL (SQLite)</span></li>
+                    <li><img src="images/tech-mongo.png" alt="MongoDB" /><span>MongoDB</span></li>
+                    <li><img src="images/tech-python.png" alt="Python" /><span>Python (Flask)</span></li>
+                </ul>
+            </div>
+            <div class="skills__section">
+                <h1 class="skills__section-title">Tools</h1>
+                <ul class="skills__list">
+                    <li><img src="images/tech-github.png" alt="github" /><span>Github</span></li>
+                    <li><img src="images/tech-heroku.png" alt="Heroku" /><span>Heroku</span></li>
+                    <li><img src="images/tech-photoshop.png" alt="photoshop" /><span>Photoshop</span></li>
+                </ul>
+            </div>
+            <a href="#" class="skills__button">Download PDF Resume</a>
         </section>
 
         <section class="courses">
