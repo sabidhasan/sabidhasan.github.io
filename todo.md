@@ -3,32 +3,20 @@ landing http://www.pavelhuza.com/  http://aaron.md/
 layout http://findmatthew.com/
 section divisions https://andrewborstein.com/
 portfolio http://findmatthew.com/
-ending section divider http://findmatthew.com/
 
 
 
-1) Portfolio: Have buttons for filtering by "Showcase" / "Vanilla JS" / "Full Stack" / "Framework"
-For each: Name (link to demo) / One Line Summary / Tech Stack in icons / Screenshot with Links to Code and Working Demo (world icon and github icon)
+1) Portfolio
+2) Courses
+3) Contact:
+      Email + social logos (GitHub + LinkedIn + SOverflow + CodePen + Heroku)
 
-2) Skills + Resume: front-end / back end + Databases / Tooling + Creative
-Resume (Projects / Education / Certificates / Technical Skills / Volunteering)
-
-3) Courses: Section for courses
-
-4) Contact: section for email + Skype + LinkedIn + social logos 
-
-5) Copyright Section / footer
-
-Images defer loading (scroll reveal js)
 Screenshots for projects are GIFs
-Scroll when click on links at navbar
-Website should be responsive
 Pictures from unsplash.com, template from HTML5 Up
 
-
-
 TODO
-1. scrolling should fix nav bar
+0. Website should be responsive
+1. scrolling should fix nav bar at top
 2. scrolling updates nav bar current link
 3. header links scroll to page pos
 4. background for nav should be blurred and darker
@@ -36,3 +24,8 @@ TODO
 6. home__text should become darker upon scroll
 7. textured background for abotu section
 8. Aria labelling
+9. Add .hover ontouchstart to project tiles (https://davidwalsh.name/css-flip)
+10. Filter upon clicking project area buttons (by stack, etc.)
+11. Download resume link
+12. Scroll to position when click on links at navbar
+13. lazy load using https://github.com/aFarkas/lazysizes
