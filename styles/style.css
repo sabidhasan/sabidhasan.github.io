@@ -12,7 +12,7 @@ body {
   font-family: sans-serif; box-sizing: border-box;
 }
 .section-header {
-  margin: 2rem auto 4rem auto; text-transform: uppercase;
+  margin: 2rem auto 3rem auto; text-transform: uppercase;
   font-size: 3.6rem; font-weight: bold; display: inline-block; border-bottom: 4px solid var(--contrast);
 }
 blockquote {
@@ -21,6 +21,9 @@ blockquote {
 }
 cite {
   text-align: right; display: block;
+}
+section {
+  display: grid;
 }
 
 .home {
@@ -60,7 +63,7 @@ cite {
 }
 
 .about {
-  background: var(--main-darker); color: var(--light); padding: 10px 60px; display: grid;
+  background: var(--main-darker); color: var(--light); padding: 10px 60px;
   text-align: center; box-shadow: 0px 0px 30px var(--dark); z-index: 1;
 }
 .about__text {
@@ -93,7 +96,7 @@ cite {
 }
 
 .projects {
-  background: var(--light); padding: 10px 60px; display: grid;
+  background: var(--light); padding: 10px 60px;
   text-align: center; color: var(--main-darker);
 }
 .projects__filters-list {
@@ -152,7 +155,7 @@ cite {
 
 
 .skills {
-  display: grid; grid-template-columns: 1fr; grid-gap: 20px; justify-items: center;
+  grid-template-columns: 1fr; grid-gap: 20px; justify-items: center;
   background: var(--main-dark); padding-bottom: 50px;
 }
 .skills__header {
@@ -182,7 +185,7 @@ cite {
 }
 
 .courses {
-  display: grid; grid-gap: 15px; margin: 0 20px;
+  grid-gap: 15px; margin: 0 20px 50px 20px;
 }
 .courses__quote {
   padding: 10px;
@@ -211,7 +214,42 @@ cite {
   font-size: 0.85rem; grid-column: span 2; font-weight: 100;
 }
 
-
+.contact {
+  background: var(--contrast-light); justify-items: center;
+}
+.contact__header {
+  margin: 2rem auto;
+}
+.contact__social {
+  display: flex;
+}
+.contact__social-fig {
+  margin: 0 30px; display: flex; flex-direction: column; justify-content: space-around;
+  align-items: center;
+}
+.contact__social-fig a {
+  color: var(--main-dark); text-decoration: none;
+}
+.contact__social-icon {
+  width: 35px; margin-bottom: 20px;
+}
+.contact__text {
+  font-size: 1.5rem; line-height: 2.3rem; font-weight: 100;
+}
+.contact__form {
+  padding: 15px; display: grid; width: 40%; font-weight: 100;
+}
+.form__input, .form__textarea, .form__submit {
+  margin: 5px 10px; background: var(--main-darker); font-size: 0.9rem;
+  padding: 5px; color: var(--lightest); border: none; outline: none;
+}
+.form__textarea {
+  height: 90px; 
+}
+.form__submit {
+  width: 20%; color: var(--main-darker); background: none; justify-self: flex-end;
+  border: 2px solid var(--main-darker); text-transform: uppercase;
+}
 
 .footer {
   background: var(--main-darker); color: var(--light); position: relative;
@@ -222,7 +260,7 @@ cite {
 }
 .footer::before, .footer::after {
   width: 50%; height: 50px; position: absolute; content: ' ';
-  background: linear-gradient(to top right, var(--main-darker) 0% 50%, var(--lightest) 50% 100%);
+  background: linear-gradient(to top right, var(--main-darker) 0% 50%, var(--contrast-light) 50% 100%);
 }
 .footer::before {
   left: 0;
