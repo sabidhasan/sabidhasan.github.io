@@ -4,15 +4,9 @@ layout http://findmatthew.com/
 section divisions https://andrewborstein.com/
 portfolio http://findmatthew.com/
 
-
-
 1) Portfolio
-2) Courses
 3) Contact:
       Email + social logos (GitHub + LinkedIn + SOverflow + CodePen + Heroku)
-
-Screenshots for projects are GIFs
-Pictures from unsplash.com, template from HTML5 Up
 
 TODO
 0. Website should be responsive
@@ -29,3 +23,7 @@ TODO
 11. Download resume link
 12. Scroll to position when click on links at navbar
 13. lazy load using https://github.com/aFarkas/lazysizes
+14. style img in courses
+15. scroll button on splash should scroll down.
+16. disable external link if not external in projects.
+17. screenshots in projects (Screenshots for projects are GIFs).
