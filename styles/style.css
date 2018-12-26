@@ -8,8 +8,9 @@
   --dark: black;
 }
 body { 
-  margin: 0; padding: 0; display: grid;
-  font-family: sans-serif; box-sizing: border-box;
+  margin: 0; padding: 0; display: grid; font-family: sans-serif; box-sizing: border-box;
+  background: url(../images/splash.jpg); background-size: 100%;
+  background-position: bottom center; background-attachment: fixed;
 }
 .section-header {
   margin: 2rem auto 3rem auto; text-transform: uppercase;
@@ -28,8 +29,7 @@ section {
 
 .home {
   height: 94vh; padding-top: 50px;
-  background-image: url('../images/splash.jpg'); background-size: cover; 
-  background-position: bottom; background-attachment: fixed;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
   display: flex; flex-direction: column; align-items: center; justify-content: center;
 }
 .home__logo {
@@ -100,12 +100,16 @@ section {
   text-align: center; color: var(--main-darker);
 }
 .projects__filters-list {
-  display: flex; list-style: none; padding: 0; margin: 0; width: 85%; margin: 0 auto;
-  margin-bottom: 50px;
+  display: grid; list-style: none; padding: 0; margin: 0; width: 85%; margin: 0 auto;
+  margin-bottom: 50px; grid-template-columns: repeat(5, 20%); position: relative;
 }
 .projects__filters-list li {
   flex: 1; padding: 12px 0; cursor: pointer; margin: 0 20px;
   border-bottom: 3px solid var(--contrast);
+}
+.projects__slider {
+  position: absolute; top: 0; height: 100%; width: 20%; left: 0;
+  background: var(--contrast); opacity: 0.4; transition: all 1s;
 }
 .projects__filter-selected {
   background: var(--contrast); border-bottom: 3px solid var(--main-dark)!important;
@@ -194,15 +198,18 @@ section {
   font-size: 1.5rem; line-height: 2.3rem; font-weight: 100;
 }
 .courses__container {
-
+  display: flex; flex-wrap: wrap; justify-content: space-evenly; align-items: center;
 }
 .courses__card {
-  width: 23%; padding: 10px; border: 1px solid var(--main-dark); border-radius: 3px;
+  width: 28%; padding: 10px; border: 1px solid var(--main-dark); border-radius: 3px; margin: 20px 0;
   display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px; background: var(--contrast-light);
 }
 .courses__card-title {
-  font-weight: 100; font-size: 1.4rem; text-align: center; margin: 0; grid-column: span 2;
-  border-bottom: 2px solid var(--contrast); padding-bottom: 5px;
+  font-size: 1.4rem; text-align: left; margin: 0; grid-column: span 2; padding-bottom: 5px;
+  border-bottom: 2px solid var(--contrast); display: flex; align-items: center;
+}
+.courses__img {
+  max-width: 50px; display: block;
 }
 .courses__card-institution {
   font-size: 0.8rem; font-weight: bold;
