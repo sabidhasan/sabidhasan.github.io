@@ -108,8 +108,8 @@ section {
   border-bottom: 3px solid var(--contrast);
 }
 .projects__slider {
-  position: absolute; top: 0; height: 100%; width: 20%; left: 0;
-  background: var(--contrast); opacity: 0.4; transition: all 1s;
+  position: absolute; top: 0; height: 100%; width: 20%; left: 0; opacity: 0.4;
+  background: var(--contrast); transition: left 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .projects__filter-selected {
   background: var(--contrast); border-bottom: 3px solid var(--main-dark)!important;
@@ -189,7 +189,7 @@ section {
 }
 
 .courses {
-  grid-gap: 15px; margin: 0 20px 50px 20px;
+  grid-gap: 15px; margin: 0; background: var(--lightest);
 }
 .courses__quote {
   padding: 10px;
@@ -205,8 +205,9 @@ section {
   display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px; background: var(--contrast-light);
 }
 .courses__card-title {
-  font-size: 1.4rem; text-align: left; margin: 0; grid-column: span 2; padding-bottom: 5px;
+  font-size: 1.4rem; text-align: left; margin: 0; grid-column: span 2; padding: 0 5px 5px 0;
   border-bottom: 2px solid var(--contrast); display: flex; align-items: center;
+  text-decoration: none; color: var(--main-dark);
 }
 .courses__img {
   max-width: 50px; display: block;

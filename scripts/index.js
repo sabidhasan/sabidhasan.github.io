@@ -76,7 +76,12 @@ class Courses {
       const name = this.addChildren(this.createElementWithClass('span'), this.createText(course.title));
       const attributes = { 'src': course.image, 'alt': course.institution, }
       const img = this.setAttributes(this.createElementWithClass('img', 'courses__img'), attributes);
-      const title = this.addChildren(this.createElementWithClass('h1', 'courses__card-title'), [name, img]);
+      const link = this.setAttributes(this.createElementWithClass('a', 'courses__card-title'), { 'href': course.url});
+
+      const header = this.addChildren(link, this.createElementWithClass('h1', 'courses__card-title'));
+      // const header = this.addChildren(this.createElementWithClass('h1', 'courses__card-title'), link);
+
+      const title = this.addChildren(header, [name, img]);
 
       const institutionElem = this.createElementWithClass('span', 'courses__card-institution');
       const institution = this.addChildren(institutionElem, this.createText(course.institution));
@@ -128,29 +133,31 @@ courses.forEach(course => coursesContainer.appendChild(course));
 class Slider {
   constructor(slider = '', list = '') {
     this.slider = document.querySelector(slider);
-    this.nodeXCoords = [];
-    this.nodeWidths = [];
-
-    const nodes = Array.from(document.querySelectorAll(list));
-    nodes.forEach(node => {
-      this.nodeXCoords.push(node.offsetLeft);
-      this.nodeWidths.push(node.offsetWidth);
-    }); 
-
-    // Move to initial position 0
-    this.move(0);
+    this.nodes = Array.from(document.querySelectorAll(list));
+    this.selectedPosition = 0;
+    // Move to initial position
+    this.move();
   }
-  move(position) {
+  move(position = this.selectedPosition) {
+    this.selectedPosition = position;
     // Find pos'th node, and set left of element
-    this.slider.style.width = `${this.nodeWidths[position]}px`;
-    this.slider.style.left = `${this.nodeXCoords[position]}px`;
+    this.slider.style.width = `${this.nodes[position].offsetWidth}px`;
+    this.slider.style.left = `${this.nodes[position].offsetLeft}px`;
+    // add ARIA labelling
+    this.slider.setAttribute('aria-valuenow', (position + 1).toString());
+    this.slider.setAttribute('aria-valuetext', this.nodes[position].textContent);    
   }
 }
 
 const slider = new Slider('.projects__slider', '.projects__filters-list li');
 
+
+// Event Listeners
 const nodes = document
   .querySelectorAll('.projects__filters-list li')
   .forEach((n, index) => {
     n.addEventListener('click', () => slider.move(index));
   });
+window.onresize = () => {
+  slider.move();
+}
