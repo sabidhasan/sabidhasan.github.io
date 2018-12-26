@@ -72,33 +72,7 @@ function addCurrentYearToNode(element = '') {
   if (domNode) domNode.innerText = new Date().getFullYear();
 }
 
-////////////
-// COURSES//
-////////////
-class Courses {
-  constructor() {
-    return data.map(course => {
-      const name = this.addChildren(this.createElementWithClass('span'), this.createText(course.title));
-      const attributes = { 'src': course.image, 'alt': course.institution, }
-      const img = this.setAttributes(this.createElementWithClass('img', 'courses__img'), attributes);
-      
-      const link = this.setAttributes(this.createElementWithClass('a', 'courses__card-title'), { 'href': course.url});
-      const header = this.addChildren(link, this.createElementWithClass('h1', 'courses__card-title'));
-      const title = this.addChildren(header, [name, img]);
-
-      const institutionElem = this.createElementWithClass('span', 'courses__card-institution');
-      const institution = this.addChildren(institutionElem, this.createText(course.institution));
-
-      const dateElem = this.createElementWithClass('span', 'courses__card-date');
-      const date = this.addChildren(dateElem, this.createText(course.date));
-
-      const textElem = this.createElementWithClass('span', 'courses__card-text');
-      const text = this.addChildren(textElem, this.createText(course.description));
-
-      return this.addChildren(this.createElementWithClass('div', 'courses__card'), [title, institution, date, text]);
-      });
-    }
-
+class DomNodeCreator {
   createElementWithClass(elementType, cssClass = '') {
     const element = document.createElement(elementType);
     element.className = cssClass;
@@ -118,6 +92,7 @@ class Courses {
     });
     return parentElement;
   }
+
   setAttributes(element, attributesObject) {
     for (let item in attributesObject) {
       element.setAttribute(item, attributesObject[item]);
@@ -125,10 +100,48 @@ class Courses {
     return element;
   }
 }
+////////////
+// COURSES//
+////////////
 
-const coursesContainer = document.querySelector('.courses__container');
-const courses = new Courses();
-courses.forEach(course => coursesContainer.appendChild(course));
+class Courses extends DomNodeCreator {
+  constructor() {
+    super();
+    return data.map(course => {
+      const title = this.makeTitleElement(course);
+      const institution = this.makeInstitutionElement(course.institution);
+      const date = this.makeDateElement(course.date);
+      const text = this.makeCardElement(course.description);
+
+      return this.addChildren(this.createElementWithClass('div', 'courses__card'), [title, institution, date, text]);
+      });
+  }
+
+  makeTitleElement({ title, image, institution, url }) {
+    const name = this.addChildren(this.createElementWithClass('span'), this.createText(title));
+    const attributes = { 'src': image, 'alt': institution }
+    const img = this.setAttributes(this.createElementWithClass('img', 'courses__img'), attributes);
+
+    const link = this.setAttributes(this.createElementWithClass('a', 'courses__card-title'), { 'href': url });
+    const header = this.addChildren(link, this.createElementWithClass('h1', 'courses__card-title'));
+    return this.addChildren(header, [name, img]);
+  }
+
+  makeInstitutionElement(institution) {
+    const institutionElem = this.createElementWithClass('span', 'courses__card-institution');
+    return this.addChildren(institutionElem, this.createText(institution));
+  }
+
+  makeDateElement(date) {
+    const dateElem = this.createElementWithClass('span', 'courses__card-date');
+    return this.addChildren(dateElem, this.createText(date));
+  }
+
+  makeCardElement(description) {
+    const textElem = this.createElementWithClass('span', 'courses__card-text');
+    return this.addChildren(textElem, this.createText(description));
+  }
+}
 
 ////////////
 // SLIDER //
@@ -141,6 +154,7 @@ class Slider {
     // Move to initial position
     this.move();
   }
+
   move(position = this.selectedPosition) {
     this.selectedPosition = position;
     // Find pos'th node, and set left of element
@@ -152,17 +166,20 @@ class Slider {
   }
 }
 
+// COURSES STUFF
+const coursesContainer = document.querySelector('.courses__container');
+const courses = new Courses();
+courses.forEach(course => coursesContainer.appendChild(course));
+// SLIDER STUFF
 const slider = new Slider('.projects__slider', '.projects__filters-list li');
-
-
-// Event Listeners
+// ADD YEAR TO FOOTER
+addCurrentYearToNode('.footer__copyright-year');
+// EVENT LISTENERS
+window.onresize = () => {
+  slider.move();
+}
 const nodes = document
   .querySelectorAll('.projects__filters-list li')
   .forEach((n, index) => {
     n.addEventListener('click', () => slider.move(index));
   });
-window.onresize = () => {
-  slider.move();
-}
-
-addCurrentYearToNode('.footer__copyright-year');
