@@ -67,6 +67,11 @@ const data = [
   },
 ];
 
+function addCurrentYearToNode(element = '') {
+  const domNode = document.querySelector(element);
+  if (domNode) domNode.innerText = new Date().getFullYear();
+}
+
 ////////////
 // COURSES//
 ////////////
@@ -76,11 +81,9 @@ class Courses {
       const name = this.addChildren(this.createElementWithClass('span'), this.createText(course.title));
       const attributes = { 'src': course.image, 'alt': course.institution, }
       const img = this.setAttributes(this.createElementWithClass('img', 'courses__img'), attributes);
+      
       const link = this.setAttributes(this.createElementWithClass('a', 'courses__card-title'), { 'href': course.url});
-
       const header = this.addChildren(link, this.createElementWithClass('h1', 'courses__card-title'));
-      // const header = this.addChildren(this.createElementWithClass('h1', 'courses__card-title'), link);
-
       const title = this.addChildren(header, [name, img]);
 
       const institutionElem = this.createElementWithClass('span', 'courses__card-institution');
@@ -161,3 +164,5 @@ const nodes = document
 window.onresize = () => {
   slider.move();
 }
+
+addCurrentYearToNode('.footer__copyright-year');
