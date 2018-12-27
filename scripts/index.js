@@ -419,9 +419,29 @@ addCurrentYearToNode('.footer__copyright-year');
 
 // EVENT LISTENERS
 window.onresize = () => {
+  // Move and remake slider in case screen switched orientation
   slider.move();
-  // Remake the slider in case screen switched resolutions
-  // slider = new Slider('.projects__slider', '.projects__filters-list li');
+  slider = new Slider('.projects__slider', '.projects__filters-list li');
+}
+
+const sections = Array.from(document.querySelectorAll('section')).reverse();
+const navLinks = document.querySelectorAll('.nav__link');
+window.onscroll = () => {
+  const foundSection = sections.findIndex((section, index) => (
+    section.getBoundingClientRect().top < window.innerHeight / 1.5
+  ));
+  if (foundSection === -1) {
+    navLinks.forEach(link => link.classList.remove('nav__link-selected'));
+  } else {
+    const indexToUpdate = sections.length - 1 - foundSection;
+    navLinks.forEach((link, index) => {
+      if (index === indexToUpdate) {
+        link.classList.add('nav__link-selected');
+      } else {
+        link.classList.remove('nav__link-selected');
+      }
+    })
+  }
 }
 
 const nodes = document
