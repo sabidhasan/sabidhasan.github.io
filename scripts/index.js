@@ -74,9 +74,9 @@ const projectData = [
     longText: `Full stack project for discovering and reviewing campgrounds from across
       Canada. Fully responsive, ARIA-compliant page featuring user auth and tested code.`,
     deployLink: '',
-    githubLink: '',
-    techStack: ['html', 'css', 'react', 'node', 'mongodb', 'responsive', 'firebase'],
-    tags: ['SHOWCASE', 'FULLSTACK']
+    githubLink: 'https://github.com/sabidhasan/yelp-camp',
+    techStack: ['html', 'css', 'react', 'node', 'mongo', 'responsive', 'firebase'],
+    tags: ['SHOWCASE', 'FULL STACK']
   },
   {
     img: '',
@@ -86,7 +86,7 @@ const projectData = [
       and matplotlib for manipulating chemical data in a Pythonic manner. Uses requests,
       regex, and object oriented design.`,
     deployLink: '',
-    githubLink: '',
+    githubLink: 'https://github.com/sabidhasan/NistPy',
     techStack: ['python'],
     tags: ['SHOWCASE', 'CHEMISTRY']
   },
@@ -96,10 +96,10 @@ const projectData = [
     text: '🔍 Spy into the world of Vatsim',
     longText: `VATSIM is a non-profit that runs a flight-simulation network.
     VATSee displays a live view into VatSim. Backend features memoization and SQLite database`,
-    deployLink: '',
-    githubLink: '',
-    techStack: ['python', 'flask', 'jquery', 'css', 'html', 'sql', 'bootstrap'],
-    tags: ['SHOWCASE', 'FULLSTACK']
+    deployLink: 's',
+    githubLink: 'https://github.com/sabidhasan/VATSee',
+    techStack: ['python', 'flask', 'jquery', 'css', 'html', 'mysql', 'bootstrap'],
+    tags: ['SHOWCASE', 'FULL STACK']
   },
   {
     img: '',
@@ -109,9 +109,9 @@ const projectData = [
     informational system, with a public API for writing custom widgets. Intended for 
     showing messages, weather, traffic, etc.`,
     deployLink: '',
-    githubLink: '',
-    techStack: ['typescript', 'vue', 'html', 'css', 'node'],
-    tags: ['FULLSTACK']
+    githubLink: 'https://gitlab.com/abidhasan/textrise',
+    techStack: ['ts', 'vue', 'html', 'css', 'node'],
+    tags: ['FULL STACK']
   },
   {
     img: '',
@@ -122,8 +122,8 @@ const projectData = [
       sign up and sharing tasks. CLOSED SOURCE.`,
     deployLink: null,
     githubLink: null,
-    techStack: ['react', 'html', 'css', 'typescript', 'node', 'sql'],
-    tags: ['FULLSTACK']
+    techStack: ['react', 'html', 'css', 'ts', 'node', 'mysql'],
+    tags: ['FULL STACK']
   },
   {
     img: '',
@@ -132,9 +132,9 @@ const projectData = [
     longText: `Responsive, friendly website for parsing aviation weather data.
       Handles incomplete data, worldwide airport codes and unit systems (meters/feet).`,
     deployLink: '',
-    githubLink: '',
-    techStack: ['html', 'css', 'javascript', 'responsive'],
-    tags: ['FRONTEND']
+    githubLink: 'https://github.com/sabidhasan/metar-parser',
+    techStack: ['html', 'css', 'js', 'responsive'],
+    tags: ['FRONT END']
   },
   {
     img: '',
@@ -142,9 +142,9 @@ const projectData = [
     text: 'Simple LED calculator simulator, which supports basic arithmetic',
     longText: `Made as a part of FreeCodeCamp, basic calculator`,
     deployLink: '',
-    githubLink: '',
-    techStack: ['html', 'css', 'javascript', 'responsive', 'jquery'],
-    tags: ['FRONTEND']
+    githubLink: 'https://github.com/sabidhasan/FreeCodeCamp',
+    techStack: ['html', 'css', 'js', 'responsive', 'jquery'],
+    tags: ['FRONT END']
   },
   {
     img: '',
@@ -153,9 +153,9 @@ const projectData = [
     longText: `Beaufiful tic tac toe game, that offers custom symbols, and three levels
       of difficulty (the highest is unbeatable, where the computer plays perfectly).`,
     deployLink: '',
-    githubLink: '',
-    techStack: ['html', 'scss', 'javascript'],
-    tags: ['FRONTEND']
+    githubLink: 'https://github.com/sabidhasan/FreeCodeCamp',
+    techStack: ['html', 'sass', 'js'],
+    tags: ['FRONT END']
   },
   {
     img: '',
@@ -164,21 +164,21 @@ const projectData = [
     longText: `Features sound and buttons of the classic simon game from the 1980s.
       Strict mode available.`,
     deployLink: '',
-    githubLink: '',
-    techStack: ['html', 'scss', 'javascript', 'jquery'],
-    tags: ['FRONTEND']
+    githubLink: 'https://github.com/sabidhasan/FreeCodeCamp',
+    techStack: ['html', 'sass', 'js', 'jquery'],
+    tags: ['FRONT END']
   },
-  {
-    img: '',
-    title: 'Catch Of The Day',
-    text: 'A front end for a ficticious React store that sells fish.',
-    longText: `Created as a part of Wesbos React course, Catch of the Day is a 
-      fish that features inventory control and support for multiple stores.`,
-    deployLink: '',
-    githubLink: '',
-    techStack: ['gulp', 'css', 'javascript', 'react'],
-    tags: []
-  },
+  // {
+  //   img: '',
+  //   title: 'Catch Of The Day',
+  //   text: 'A front end for a ficticious React store that sells fish.',
+  //   longText: `Created as a part of Wesbos React course, Catch of the Day is a 
+  //     fish that features inventory control and support for multiple stores.`,
+  //   deployLink: '',
+  //   githubLink: 'https://github.com/sabidhasan/catch-of-the-day',
+  //   techStack: ['css', 'js', 'react'],
+  //   tags: ['FRONT END']
+  // },
   {
     img: '',
     title: 'parsemol.js',
@@ -186,8 +186,8 @@ const projectData = [
     longText: `Created for (defunct) cBase project, this class allows parsing and validation
       of complex, nested chemical formulae.`,
     deployLink: '',
-    githubLink: '',
-    techStack: ['javascript'],
+    githubLink: 'https://github.com/sabidhasan/chemical-formula',
+    techStack: ['js'],
     tags: ['CHEMISTRY']
   },
   {
@@ -198,7 +198,7 @@ const projectData = [
       Tools for CNS Multiparameter Optimization, pKa, lipE, clogP, ligand efficiency,
       finding duplicates, and more.`,
     deployLink: '',
-    githubLink: '',
+    githubLink: 'https://github.com/sabidhasan/ChemScripts',
     techStack: ['python'],
     tags: ['CHEMISTRY']
   },
@@ -209,9 +209,9 @@ const projectData = [
     longText: `RESTful API for serving live Vatsim data from the Vatsim flight sim network.
       Supports caching/memoization to reduce server load.`,
     deployLink: '',
-    githubLink: '',
+    githubLink: 'https://github.com/sabidhasan/restful-vatsim',
     techStack: ['python'],
-    tags: ['FULLSTACK']
+    tags: ['FULL STACK']
   },
 ]
 
@@ -256,12 +256,17 @@ class Courses extends DomNodeCreator {
   constructor() {
     super();
     return data.map(course => {
+      const parentElement = this.createElementWithClass('div', 'courses__card');
       const title = this.makeTitleElement(course);
       const institution = this.makeInstitutionElement(course.institution);
       const date = this.makeDateElement(course.date);
       const text = this.makeCardElement(course.description);
-
-      return this.addChildren(this.createElementWithClass('div', 'courses__card'), [title, institution, date, text]);
+      
+      let button = this.createElementWithClass('button', 'courses__card-button');
+      button = this.addChildren(button, this.createText('Show Course Description'));
+      button.addEventListener('click', () => parentElement.classList.add('courses__card-expanded'));
+      
+      return this.addChildren(parentElement, [title, institution, date, text, button]);
       });
   }
 
@@ -271,8 +276,7 @@ class Courses extends DomNodeCreator {
     const img = this.setAttributes(this.createElementWithClass('img', 'courses__img'), attributes);
 
     const link = this.setAttributes(this.createElementWithClass('a', 'courses__card-title'), { 'href': url });
-    const header = this.addChildren(link, this.createElementWithClass('h1', 'courses__card-title'));
-    return this.addChildren(header, [name, img]);
+    return this.addChildren(link, [name, img]);
   }
 
   makeInstitutionElement(institution) {
@@ -297,10 +301,7 @@ class Courses extends DomNodeCreator {
 class Projects extends DomNodeCreator {
   constructor() {
     super();
-    this.filteredResults = projectData;
-    this.DOMNodes = [];
-
-    this.makeDOMNodes();
+    this.DOMNodes = this.makeDOMNodes(projectData);
     this.attachDOMNodes();
   }
 
@@ -315,10 +316,9 @@ class Projects extends DomNodeCreator {
 
   }
 
-  makeDOMNodes() {
-    this.DOMNodes = this.filteredResults.map(node => {
-
-      const attributes = { 'src': node.img, 'alt': node.title, }
+  makeDOMNodes(data) {
+    return data.map(node => {
+      const attributes = { 'src': node.img, 'alt': node.title, };
       const screenshot = this.setAttributes(this.createElementWithClass('img', 'courses__img'), attributes);
 
       let title = this.createElementWithClass('h1', 'projects__tile-title');
@@ -334,37 +334,48 @@ class Projects extends DomNodeCreator {
       let backTitle = this.createElementWithClass('h1', 'projects__tile-title');
       backTitle = this.addChildren(backTitle, this.createText(node.title));
 
+      let closeButton = this.createElementWithClass('span', 'projects__tile-close');
+      closeButton = this.addChildren(closeButton, this.createText('X'));
+      closeButton = this.setAttributes(closeButton, {'aria-label': 'Close details'});
+
       let longSummary = this.createElementWithClass('p', 'projects__tile-text');
       longSummary = this.addChildren(longSummary, this.createText(node.longText));
 
       let codeLink = this.createElementWithClass('a', 'project__tile-links');
       codeLink = this.setAttributes(codeLink, { 'href': node.githubLink });
-      codeLink = this.addChildren(codeLink, this.createElementWithClass('i', 'fas fa-external-link-alt'));
+      codeLink = this.addChildren(codeLink, this.createElementWithClass('i', 'fab fa-github'));
 
-      let deployLink = this.createElementWithClass('a', 'project__tile-links');
-      deployLink = this.setAttributes(deployLink, { 'href': node.deployLink });
-      deployLink = this.addChildren(deployLink, this.createElementWithClass('i', 'fab fa-github'));
+      let deployLink = this.createElementWithClass('a', `project__tile-links${!node.deployLink ? ' project__links-disabled' : ''}`);
+      const linkAttributes = { 'href': node.deployLink || '#', 'aria-disabled': (!node.deployLink).toString() };
+      deployLink = this.setAttributes(deployLink, linkAttributes);
+      deployLink = this.addChildren(deployLink, this.createElementWithClass('i', 'fas fa-external-link-alt'));
 
       let techStack = this.createElementWithClass('ul', 'projects__tile-icons');
-      node.techStack.forEach(tech => {
-        const techElement = this.addChildren(this.createElementWithClass('li'), this.createText(tech));
+      node.techStack.forEach(techString => {
+        let techIcon = this.createElementWithClass('img', 'projects__tile-img');
+        techIcon = this.setAttributes(techIcon, { 'src': `/images/tech/tech-${techString}.png`, alt: ''});
+        const techElement = this.addChildren(this.createElementWithClass('li'), techIcon);
         techStack = this.addChildren(techStack, techElement);
       })
 
       let back = this.createElementWithClass('div', 'projects__tile-back');
-      back = this.addChildren(back, [backTitle, longSummary, techStack, codeLink, deployLink])
+      back = this.addChildren(back, [backTitle, closeButton, longSummary, techStack, codeLink, deployLink])
 
-      const projectTile = this.createElementWithClass('div', 'projects__tile');
+      let projectTile = this.createElementWithClass('div', 'projects__tile');
+      projectTile = this.setAttributes(projectTile, { 'data-type': node.tags.join(' ') })
       return this.addChildren(projectTile, [front, back]);
-    })
+    });
   }
 
   filter(type) {
-    if (!type) {
-      this.filteredResults = projectData;
-    } else {
-      this.filteredResults = projectData.filter(project => project.techStack.includes(type));
-    }
+    this.DOMNodes.forEach(node => {
+      // show if it needs to be shown
+      if (!type || type == 'ALL' || node.dataset.type.includes(type)) {
+        node.classList.remove('projects__tile-hidden');
+      } else {
+        node.classList.add('projects__tile-hidden');
+      }
+    });
   }
 }
 
@@ -385,6 +396,7 @@ class Slider {
     // Find pos'th node, and set left of element
     this.slider.style.width = `${this.nodes[position].offsetWidth}px`;
     this.slider.style.left = `${this.nodes[position].offsetLeft}px`;
+    this.slider.style.top = `${this.nodes[position].offsetTop}px`;
     // add ARIA labelling
     this.slider.setAttribute('aria-valuenow', (position + 1).toString());
     this.slider.setAttribute('aria-valuetext', this.nodes[position].textContent);    
@@ -392,21 +404,31 @@ class Slider {
 }
 
 // PROJECTS
-new Projects();
+const projects = new Projects();
+
 // COURSES STUFF
 const coursesContainer = document.querySelector('.courses__container');
 const courses = new Courses();
 courses.forEach(course => coursesContainer.appendChild(course));
+
 // SLIDER STUFF
-const slider = new Slider('.projects__slider', '.projects__filters-list li');
+let slider = new Slider('.projects__slider', '.projects__filters-list li');
+
 // ADD YEAR TO FOOTER
 addCurrentYearToNode('.footer__copyright-year');
+
 // EVENT LISTENERS
 window.onresize = () => {
   slider.move();
+  // Remake the slider in case screen switched resolutions
+  // slider = new Slider('.projects__slider', '.projects__filters-list li');
 }
+
 const nodes = document
   .querySelectorAll('.projects__filters-list li')
   .forEach((n, index) => {
-    n.addEventListener('click', () => slider.move(index));
+    n.addEventListener('click', () => {
+      slider.move(index)
+      projects.filter(n.innerText)
+    });
   });
