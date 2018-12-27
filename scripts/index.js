@@ -419,9 +419,8 @@ addCurrentYearToNode('.footer__copyright-year');
 
 // EVENT LISTENERS
 window.onresize = () => {
-  // Move and remake slider in case screen switched orientation
+  // Move slider
   slider.move();
-  slider = new Slider('.projects__slider', '.projects__filters-list li');
 }
 
 const sections = Array.from(document.querySelectorAll('section')).reverse();
