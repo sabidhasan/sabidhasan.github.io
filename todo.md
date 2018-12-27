@@ -9,21 +9,9 @@ portfolio http://findmatthew.com/
       Email + social logos (GitHub + LinkedIn + SOverflow + CodePen + Heroku)
 
 TODO
-0. Website should be responsive
-1. scrolling should fix nav bar at top
-2. scrolling updates nav bar current link
-3. header links scroll to page pos
-4. background for nav should be blurred and darker
-5. responsive logo should be see thru
-6. home__text should become darker upon scroll
-7. textured background for abotu section
-8. Aria labelling
-9. Add .hover ontouchstart to project tiles (https://davidwalsh.name/css-flip)
-10. Filter upon clicking project area buttons (by stack, etc.)
-11. Download resume link
-12. Scroll to position when click on links at navbar
-13. lazy load using https://github.com/aFarkas/lazysizes
-14. style img in courses
-15. scroll button on splash should scroll down.
-16. disable external link if not external in projects.
-17. screenshots in projects (Screenshots for projects are GIFs).
+1. Add .hover ontouchstart to project tiles (https://davidwalsh.name/css-flip)
+2. screenshots in projects (Screenshots for projects are GIFs).
+
+3. Aria labelling
+4. lazy load using https://github.com/aFarkas/lazysizes
+5. textured background for abotu section
