@@ -4,14 +4,20 @@ layout http://findmatthew.com/
 section divisions https://andrewborstein.com/
 portfolio http://findmatthew.com/
 
-1) Portfolio
-3) Contact:
-      Email + social logos (GitHub + LinkedIn + SOverflow + CodePen + Heroku)
-
 TODO
-1. Add .hover ontouchstart to project tiles (https://davidwalsh.name/css-flip)
-2. screenshots in projects (Screenshots for projects are GIFs).
+1. Aria labelling
+2. lazy load using https://github.com/aFarkas/lazysizes
 
-3. Aria labelling
-4. lazy load using https://github.com/aFarkas/lazysizes
-5. textured background for abotu section
+3. screenshots in projects (Screenshots for projects are GIFs).
+  1 yelpcamp
+  2 nistpy
+  3 vatsee
+  4 textrise
+  5 goalstep
+  6 metar parser
+  7 calculator
+  8 tic tac toe
+  9 simon game
+  10 parsemol
+  11 chemscripts
+  12 restful vatsim
