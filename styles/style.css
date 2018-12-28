@@ -6,7 +6,7 @@
   --contrast-light: hsl(13, 66%, 97%);
   --main-dark: #2f4c54;
   --main-darker: #1d3035;
-  --light: #dcf5f3;
+  --light: #e2f3fb;
   --lightest: white;
   --dark: black;
   scroll-behavior: smooth;
@@ -112,6 +112,13 @@ section {
   background-image: url('/images/texture-projects.png');
   background-color: var(--light); padding: 10px 60px; text-align: center; color: var(--main-darker);
   --collapsed-height: 10px; box-shadow: -5px -5px 50px var(--dark); z-index: 5;
+}
+.projects__text {
+  font-size: 1.7rem; line-height: 2.5rem; font-weight: 100; margin: 0 0 3rem 0;
+  text-align: left;
+}
+.projects__text a {
+  color: var(--main-dark); font-weight: 300;
 }
 .projects__filters-list {
   display: grid; list-style: none; padding: 0; margin: 0 auto 50px auto; width: 85%;
@@ -391,6 +398,9 @@ section {
 
   .projects { 
     padding: 0; width: 100%; 
+  }
+  .projects__text { 
+    margin: 0 0 1rem 0; line-height: 1.7rem; font-size: 1.1rem;
   }
   .projects__filters-list { 
     width: 100%; margin: 5px auto; display: flex; flex-direction: column; width: 55%;
