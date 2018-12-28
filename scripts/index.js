@@ -140,7 +140,8 @@ const projectData = [
     img: '',
     title: 'Old School Calculator',
     text: 'Simple LED calculator simulator, which supports basic arithmetic',
-    longText: `Made as a part of FreeCodeCamp, basic calculator`,
+    longText: `Made as a part of FreeCodeCamp, basic calculator with support for arithmetic,
+      memory recall and full keyboard support.`,
     deployLink: '',
     githubLink: 'https://github.com/sabidhasan/FreeCodeCamp',
     techStack: ['html', 'css', 'js', 'responsive', 'jquery'],
@@ -182,10 +183,10 @@ const projectData = [
   {
     img: '',
     title: 'parsemol.js',
-    text: 'Molecular formula parser for Javascript',
-    longText: `Created for (defunct) cBase project, this class allows parsing and validation
+    text: 'Comprehensive molecular formula parser for Javascript',
+    longText: `Created for my cBase project, this function allows parsing and validation
       of complex, nested chemical formulae.`,
-    deployLink: '',
+    deployLink: null,
     githubLink: 'https://github.com/sabidhasan/chemical-formula',
     techStack: ['js'],
     tags: ['CHEMISTRY']
@@ -202,17 +203,17 @@ const projectData = [
     techStack: ['python'],
     tags: ['CHEMISTRY']
   },
-  {
-    img: '',
-    title: 'Restful-Vatsim',
-    text: 'RESTful service for accessing Vatsim data',
-    longText: `RESTful API for serving live Vatsim data from the Vatsim flight sim network.
-      Supports caching/memoization to reduce server load.`,
-    deployLink: '',
-    githubLink: 'https://github.com/sabidhasan/restful-vatsim',
-    techStack: ['python'],
-    tags: ['FULL STACK']
-  },
+  // {
+  //   img: '',
+  //   title: 'Restful-Vatsim',
+  //   text: 'RESTful service for accessing Vatsim data',
+  //   longText: `RESTful API for serving live Vatsim data from the Vatsim flight sim network.
+  //     Supports caching/memoization to reduce server load.`,
+  //   deployLink: '',
+  //   githubLink: 'https://github.com/sabidhasan/restful-vatsim',
+  //   techStack: ['python'],
+  //   tags: ['FULL STACK']
+  // },
 ]
 
 function addCurrentYearToNode(element = '') {
