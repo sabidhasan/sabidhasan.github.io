@@ -429,9 +429,11 @@ section {
   .projects__tile-title { padding: 5px 0; }
   .projects__tile-icons { padding-top: 5px; }
   .projects__tile-screenshot { 
-    margin-top: 5px; width: 84%;
+    margin-top: 5px; width: 80%;
   }
-  .projects__tile-front .projects__tile-text { font-size: 0.85rem; }
+  .projects__tile-front .projects__tile-text { 
+    font-size: 0.85rem; margin: 3px 0 0 0;
+  }
 
   /* .skills { width: 101%; } */
   .skills__section { 
