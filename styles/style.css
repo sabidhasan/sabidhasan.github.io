@@ -353,7 +353,7 @@ section {
     margin: 0; font-size: 1.5rem;
   }
   .section-header { 
-    margin: 5px 0; font-size: 1.8rem; border-bottom: none;
+    margin: 20px 0; font-size: 1.8rem; border-bottom: none; font-weight: 900;
   }
 
   .home {
@@ -427,7 +427,6 @@ section {
     box-shadow: none; flex-basis: 100%; margin: 5px;
   }
   .projects__tile-title { padding: 5px 0; }
-  .projects__tile-button { top: 0; }
   .projects__tile-icons { padding-top: 5px; }
   .projects__tile-front .projects__tile-text { font-size: 0.85rem; }
 
@@ -479,8 +478,8 @@ section {
   .form__submit { width: 30%; }
 
   .footer { padding-bottom: 15px; }
-  /* width: 101%;  */
-  .footer__copyright { padding-top: 55px; }
+  .footer::before, .footer::after { height: 25px; }
+  .footer__copyright { padding-top: 35px; }
   .footer__button { font-size: 1.5rem;}
   footer p { margin: 0; }
 }
