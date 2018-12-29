@@ -162,11 +162,12 @@ section {
   padding: 10px 0; color: var(--main-darker);
 }
 .projects__tile-button {
-    position: absolute; font-size: 2.3rem; z-index: 1; font-weight: normal; color: var(--contrast); 
-    transform: rotateZ(90deg); right: -10px; top: 2px; transition: color 0.15s; cursor: pointer;
+    position: absolute; right: -10px; top: 2px; font-size: 2.3rem; z-index: 1;
+    font-weight: normal; color: var(--contrast); transform: rotateZ(90deg);
+    transition: color 0.15s; cursor: pointer;
 }
 .projects__tile-button-flipped {
-  right: 5px; top: 10px; color: var(--main-dark); transform: rotateZ(0);
+  right: 5px; color: var(--main-dark); transform: rotateZ(0);
 }
 .projects__tile-text {
   grid-column: span 2; font-size: 0.85rem; line-height: 1.2rem; padding: 0 5px;
@@ -174,7 +175,7 @@ section {
 }
 .projects__tile-back {
   display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto 1fr auto;
-  background: var(--contrast); height: calc(100% - var(--collapsed-height));
+  background: var(--contrast); height: 100%;
   overflow: hidden; 
 }
 .project__tile-links {
@@ -195,7 +196,7 @@ section {
   max-width: 40px; max-height: 40px;
 }
 .projects__tile-flipped .projects__tile-front {
-  height: var(--collapsed-height);
+  height: 0;
 }
 
 
@@ -404,11 +405,9 @@ section {
   .projects { 
     padding: 0; width: 100%; 
   }
+  .projects__tile-button { top: -1px; }
   .projects__text { 
     margin: 0 0 1rem 0; line-height: 1.7rem; font-size: 1.1rem;
-  }
-  .projects__tile-screenshot {
-    /* width: 61%; height: 58%; */
   }
   .projects__filters-list { 
     margin: 5px auto; display: flex; flex-direction: column; width: 75%;
@@ -426,6 +425,7 @@ section {
   .projects__tile { 
     box-shadow: none; flex-basis: 100%; margin: 5px;
   }
+  .projects__tile-text { font-size: 0.95rem; }
   .projects__tile-title { padding: 5px 0; }
   .projects__tile-icons { padding-top: 5px; }
   .projects__tile-front .projects__tile-text { font-size: 0.85rem; }
@@ -491,6 +491,7 @@ section {
   .nav__link { 
     font-size: 0.60rem; font-weight: bold;
   }
+  .projects__tile-text { font-size: 0.85rem; }
   .about__logos-container { grid-gap: 0; }
   .about__logos-text { 
     font-size: .8rem; width: 60%;
