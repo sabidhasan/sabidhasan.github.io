@@ -68,57 +68,57 @@ const data = [
 ];
 const projectData = [
   {
-    img: '',
+    img: '/images/projects/project-yelpcamp.gif',
     title: 'YelpCamp',
     text: '⛺ Discover campgrounds and RVing sites from across Canada 🍁',
     longText: `Full stack project for discovering and reviewing campgrounds from across
       Canada. Fully responsive, ARIA-compliant page featuring user auth and tested code.`,
-    deployLink: '',
+    deployLink: 'http://yelpycamp.herokuapp.com',
     githubLink: 'https://github.com/sabidhasan/yelp-camp',
     techStack: ['html', 'css', 'react', 'node', 'mongo', 'responsive', 'firebase'],
     tags: ['SHOWCASE', 'FULL STACK']
   },
   {
-    img: '',
+    img: '/images/projects/project-nistpy.gif',
     title: 'NistPy',
     text: '🔬 Python module for interfacing with NIST Webbook (a chemistry resource)',
     longText: `Class for interfacing with NIST Webbook. Uses numpy, pandas
       and matplotlib for manipulating chemical data in a Pythonic manner. Uses requests,
       regex, and object oriented design.`,
-    deployLink: '',
+    deployLink: null,
     githubLink: 'https://github.com/sabidhasan/NistPy',
     techStack: ['python'],
     tags: ['SHOWCASE', 'CHEMISTRY']
   },
   {
-    img: '',
+    img: '/images/projects/project-vatsee.gif',
     title: 'VATSee',
     text: '🔍 Spy into the world of Vatsim',
     longText: `VATSIM is a non-profit that runs a flight-simulation network.
     VATSee displays a live view into VatSim. Backend features memoization and SQLite database`,
-    deployLink: 's',
+    deployLink: null,
     githubLink: 'https://github.com/sabidhasan/VATSee',
     techStack: ['python', 'flask', 'jquery', 'css', 'html', 'mysql', 'bootstrap'],
     tags: ['SHOWCASE', 'FULL STACK']
   },
   {
-    img: '',
+    img: '/images/projects/project-textrise.gif',
     title: 'Textrise',
-    text: '📺 Textrise displays at-a-glance information in elevators',
-    longText: `Work in progress: Built a free, no-advertisement, and stable elevator
-    informational system, with a public API for writing custom widgets. Intended for 
-    showing messages, weather, traffic, etc.`,
-    deployLink: '',
+    text: '📺 Textrise displays at-a-glance information in elevators (work-in-progress)',
+    longText: `Work in progress: In a team of two, building a free, no-advertisement 
+    elevator informational system, with a public API for writing custom widgets.
+    Intended for showing messages, weather, traffic, etc.`,
+    deployLink: null,
     githubLink: 'https://gitlab.com/abidhasan/textrise',
     techStack: ['ts', 'vue', 'html', 'css', 'node'],
     tags: ['FULL STACK']
   },
   {
-    img: '',
+    img: '/images/projects/project-goalstep.gif',
     title: 'Goalstep',
-    text: '☑️ Goalstep is goal tracking for nerds!',
-    longText: `Helped with writing MVP for goal tracking software. A cross between a
-      to-do list and full-fledged project management software. Features user auth,
+    text: '☑️ Goalstep is goal tracking for nerds (work-in-progress)!',
+    longText: `Helped with writing MVP for goal tracking software (team of two).
+    A cross between a to-do list and project management software. Features user auth,
       sign up and sharing tasks. CLOSED SOURCE.`,
     deployLink: null,
     githubLink: null,
@@ -126,45 +126,45 @@ const projectData = [
     tags: ['FULL STACK']
   },
   {
-    img: '',
+    img: '/images/projects/project-metarparser.gif',
     title: 'METAR-Parser',
     text: '✈️ Parses aviation meteorological reports into 👨‍👩‍👧‍👦-friendly format',
     longText: `Responsive, friendly website for parsing aviation weather data.
       Handles incomplete data, worldwide airport codes and unit systems (meters/feet).`,
-    deployLink: '',
+    deployLink: null,
     githubLink: 'https://github.com/sabidhasan/metar-parser',
     techStack: ['html', 'css', 'js', 'responsive'],
     tags: ['FRONT END']
   },
   {
-    img: '',
+    img: '/images/projects/project-calculator.gif',
     title: 'Old School Calculator',
     text: 'Simple LED calculator simulator, which supports basic arithmetic',
     longText: `Made as a part of FreeCodeCamp, basic calculator with support for arithmetic,
       memory recall and full keyboard support.`,
-    deployLink: '',
+    deployLink: null,
     githubLink: 'https://github.com/sabidhasan/FreeCodeCamp',
     techStack: ['html', 'css', 'js', 'responsive', 'jquery'],
     tags: ['FRONT END']
   },
   {
-    img: '',
+    img: '/images/projects/project-tictactoe.gif',
     title: 'Tic Tac Toe',
     text: 'Unbeatable tic tac toe game',
     longText: `Beaufiful tic tac toe game, that offers custom symbols, and three levels
       of difficulty (the highest is unbeatable, where the computer plays perfectly).`,
-    deployLink: '',
+    deployLink: null,
     githubLink: 'https://github.com/sabidhasan/FreeCodeCamp',
     techStack: ['html', 'sass', 'js'],
     tags: ['FRONT END']
   },
   {
-    img: '',
+    img: '/images/projects/project-simongame.gif',
     title: 'Simon Game',
     text: 'Recreation of the classic Simon Says game',
-    longText: `Features sound and buttons of the classic simon game from the 1980s.
-      Strict mode available.`,
-    deployLink: '',
+    longText: `Features the sounds and buttons of the classic Simon game from the 1980s.
+      Also has Strict Mode, like the real game.`,
+    deployLink: null,
     githubLink: 'https://github.com/sabidhasan/FreeCodeCamp',
     techStack: ['html', 'sass', 'js', 'jquery'],
     tags: ['FRONT END']
@@ -181,7 +181,7 @@ const projectData = [
   //   tags: ['FRONT END']
   // },
   {
-    img: '',
+    img: '/images/projects/project-parsemol.gif',
     title: 'parsemol.js',
     text: 'Comprehensive molecular formula parser for Javascript',
     longText: `Created for my cBase project, this function allows parsing and validation
@@ -192,13 +192,13 @@ const projectData = [
     tags: ['CHEMISTRY']
   },
   {
-    img: '',
+    img: '/images/projects/project-chemscripts.gif',
     title: 'ChemScripts',
     text: 'Scripts for chemists, written by a chemist.',
     longText: `Scripts for aiding the medicinal chemist working with Dotmatics software.
       Tools for CNS Multiparameter Optimization, pKa, lipE, clogP, ligand efficiency,
       finding duplicates, and more.`,
-    deployLink: '',
+    deployLink: null,
     githubLink: 'https://github.com/sabidhasan/ChemScripts',
     techStack: ['python'],
     tags: ['CHEMISTRY']
@@ -249,9 +249,9 @@ class DomNodeCreator {
     return element;
   }
 }
-////////////
-// COURSES//
-////////////
+///////////
+//COURSES//
+///////////
 
 class Courses extends DomNodeCreator {
   constructor() {
@@ -300,9 +300,9 @@ class Courses extends DomNodeCreator {
 // PROJECTS //
 //////////////
 class Projects extends DomNodeCreator {
-  constructor() {
+  constructor(data) {
     super();
-    this.DOMNodes = this.makeDOMNodes(projectData);
+    this.DOMNodes = this.makeDOMNodes(data);
     this.attachDOMNodes();
   }
 
@@ -310,8 +310,11 @@ class Projects extends DomNodeCreator {
     const parentElem = document.querySelector('.projects__tile-container');
     this.DOMNodes.forEach(val => {
       parentElem.appendChild(val);
-      val.addEventListener('click', () => {
+      const flipButton = val.querySelector('.projects__tile-button');
+      flipButton.addEventListener('click', function () {
         val.classList.toggle('projects__tile-flipped');
+        this.classList.toggle('projects__tile-button-flipped');
+        this.innerText = this.innerText === '...' ? 'X' : '...';
       });
     });
 
@@ -320,7 +323,8 @@ class Projects extends DomNodeCreator {
   makeDOMNodes(data) {
     return data.map(node => {
       const attributes = { 'src': node.img, 'alt': node.title, };
-      const screenshot = this.setAttributes(this.createElementWithClass('img', 'courses__img'), attributes);
+      const image = this.createElementWithClass('img', 'projects__tile-screenshot');
+      const screenshot = this.setAttributes(image, attributes);
 
       let title = this.createElementWithClass('h1', 'projects__tile-title');
       title = this.addChildren(title, this.createText(node.title));
@@ -334,10 +338,6 @@ class Projects extends DomNodeCreator {
       // BACK
       let backTitle = this.createElementWithClass('h1', 'projects__tile-title');
       backTitle = this.addChildren(backTitle, this.createText(node.title));
-
-      let closeButton = this.createElementWithClass('span', 'projects__tile-close');
-      closeButton = this.addChildren(closeButton, this.createText('X'));
-      closeButton = this.setAttributes(closeButton, {'aria-label': 'Close details'});
 
       let longSummary = this.createElementWithClass('p', 'projects__tile-text');
       longSummary = this.addChildren(longSummary, this.createText(node.longText));
@@ -360,11 +360,16 @@ class Projects extends DomNodeCreator {
       })
 
       let back = this.createElementWithClass('div', 'projects__tile-back');
-      back = this.addChildren(back, [backTitle, closeButton, longSummary, techStack, codeLink, deployLink])
+      back = this.addChildren(back, [backTitle, longSummary, techStack, codeLink, deployLink])
+
+      // Button
+      let button = this.createElementWithClass('span', 'projects__tile-button');
+      button = this.addChildren(button, this.createText('...'));
+      button = this.setAttributes(button, { 'aria-label': 'Close details' });
 
       let projectTile = this.createElementWithClass('div', 'projects__tile');
       projectTile = this.setAttributes(projectTile, { 'data-type': node.tags.join(' ') })
-      return this.addChildren(projectTile, [front, back]);
+      return this.addChildren(projectTile, [button, front, back]);
     });
   }
 
@@ -405,7 +410,7 @@ class Slider {
 }
 
 // PROJECTS
-const projects = new Projects();
+const projects = new Projects(projectData);
 
 // COURSES STUFF
 const coursesContainer = document.querySelector('.courses__container');
