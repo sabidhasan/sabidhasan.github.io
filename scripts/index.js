@@ -343,9 +343,10 @@ class Projects extends DomNodeCreator {
       let longSummary = this.createElementWithClass('p', 'projects__tile-text');
       longSummary = this.addChildren(longSummary, this.createText(node.longText));
 
-      let codeLink = this.createElementWithClass('a', 'project__tile-links');
-      codeLink = this.setAttributes(codeLink, { 'href': node.githubLink });
-      codeLink = this.addChildren(codeLink, this.createElementWithClass('i', 'fab fa-github'));
+      let codeLink = this.createElementWithClass('a', `project__tile-links${!node.githubLink ? ' project__links-disabled' : ''}`);
+      const codeLinkAttributes = { 'href': node.githubLink || '#', 'aria-disabled': (!node.githubLink).toString() };
+      codeLink = this.setAttributes(codeLink, codeLinkAttributes);
+      codeLink = this.addChildren(codeLink, this.createElementWithClass('i', 'fas fa-external-link-alt'));
 
       let deployLink = this.createElementWithClass('a', `project__tile-links${!node.deployLink ? ' project__links-disabled' : ''}`);
       const linkAttributes = { 'href': node.deployLink || '#', 'aria-disabled': (!node.deployLink).toString() };
