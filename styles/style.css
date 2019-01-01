@@ -215,7 +215,7 @@ section {
 }
 .skills__section-title {
   font-weight: 100; font-size: 2.2rem; border-bottom: 3px solid var(--contrast);
-  padding-bottom: 4px
+  padding-bottom: 4px; text-align: left;
 }
 .skills__list {
   padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 150px));
