@@ -431,24 +431,26 @@ window.onresize = slider.move();
 const sections = Array.from(document.querySelectorAll('section')).reverse();
 const navLinks = document.querySelectorAll('.nav__link');
 function updateNavScroll() {
-  const foundSection = sections.findIndex((section, index) => (
+  const foundSection = sections.findIndex(section => (
     section.getBoundingClientRect().top < window.innerHeight / 1.5
   ));
-  if (foundSection === -1) {
-    navLinks.forEach(link => link.classList.remove('nav__link-selected'));
-  } else {
-    const indexToUpdate = sections.length - 1 - foundSection;
-    navLinks.forEach((link, index) => {
-      if (index === indexToUpdate) {
-        link.classList.add('nav__link-selected');
-      } else {
-        link.classList.remove('nav__link-selected');
-      }
-    })
-  }
+  navLinks.forEach(link => link.classList.remove('nav__link-selected'));
+  if (foundSection === -1) return
+
+  const indexToUpdate = sections.length - 1 - foundSection;
+  navLinks[indexToUpdate].classList.add('nav__link-selected');
 };
 window.onscroll = updateNavScroll;
 window.onorientationchange = updateNavScroll;
+
+const textArea = document.querySelector('.form__textarea');
+const message = "Your Message"
+textArea.addEventListener('focus', function() {
+  if (this.value == message) this.value = "";
+});
+textArea.addEventListener('blur', function () {
+  if (this.value == "") this.value = message
+});
 
 const nodes = document
   .querySelectorAll('.projects__filters-list li')
