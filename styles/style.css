@@ -310,6 +310,9 @@ section {
   width: 20%; color: var(--main-darker); background: none; justify-self: flex-end;
   border: 2px solid var(--main-darker); text-transform: uppercase; cursor: pointer;
 }
+.form__submit:focus {
+  outline: 2px solid var(--contrast);
+}
 
 .footer {
   background: var(--main-darker); color: var(--light); position: relative;
